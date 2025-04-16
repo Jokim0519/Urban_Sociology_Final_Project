@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Gets to Feel Safe: Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html"  class="nav__link">HOME</a></li>
+                <li class="nav__item"><a href="data.html" class="nav__link">DATA & ANALYSIS</a></li>
+                <li class="nav__item"><a href="results.html" class="nav__link">DISCUSSION & RESULTS</a></li>
+                <li class="nav__item"><a href="conclusion.html" class="nav__link">CONCLUSION</a></li>
+                <li class="nav__item"><a href="methods.html" class="nav__link">METHODOLOGY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Data and Analysis</h1>
+        <p>
+          Using 2023 American Community Survey data and DC crime statistics, I compared Cleveland Park and Petworth on three key metrics: <strong>income</strong>, <strong>reported crime totals</strong>, and <strong>perceptions of safety</strong>.
+        </p>
+    
+        <h2>Income Levels</h2>
+        <ul>
+          <li><strong>Cleveland Park</strong>: $123,653</li>
+          <li><strong>Petworth</strong>: $108,377</li>
+        </ul>
+    
+        <h2>Crime Reports (2023)</h2>
+        <ul>
+          <li><strong>Cleveland Park</strong>: 📉 Low</li>
+          <li><strong>Petworth</strong>: 📈 Higher, but not extreme</li>
+        </ul>
+    
+        <h2>City-Wide Perception of Crime</h2>
+        <p>
+          Perception of victimization often exceeds reported incidents, especially in areas like Petworth.
+        </p>
+    
+        <div class="chart-container">
+          <h3>Income Comparison Bar Chart</h3>
+          <img src="images/income-comparison.png" alt="Income Comparison Chart" class="chart-img">
+        </div>
+    
+        <div class="chart-container">
+          <h3>Crime Totals by Neighborhood</h3>
+          <div class="row">
+            <div class="column"><img src="images/Petworth.png"><p class="caption">Petworth Median Income</p></div>
+            <div class="column"><img src="images/Cleveland Park.png"><p class="caption">Cleveland Park Median Income</p></div>
+          </div>
+        </div>
+    
+        <div class="chart-container">
+          <h3>Victimization & Perceived Crime</h3>
+          <img src="images/victimization.png" alt="Perception vs. Victimization Chart" class="chart-img">
+        </div>
+    
+        <blockquote>
+          “While Petworth’s income is only slightly lower than Cleveland Park’s, perceptions of crime are vastly different. This gap suggests that crime perception is shaped by more than just income—factors like race, media, and neighborhood history all play a role.”
+        </blockquote>
+      </div>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelectorAll('.nav__link');
+        navToggle.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.body.classList.remove('nav-open');
+            });
+        });
+    </script>
+</body>
+</html>

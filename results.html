@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Gets to Feel Safe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html"  class="nav__link">HOME</a></li>
+                <li class="nav__item"><a href="data.html" class="nav__link">DATA & ANALYSIS</a></li>
+                <li class="nav__item"><a href="results.html" class="nav__link">DISCUSSION & RESULTS</a></li>
+                <li class="nav__item"><a href="conclusion.html" class="nav__link">CONCLUSION</a></li>
+                <li class="nav__item"><a href="methods.html" class="nav__link">METHODOLOGY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Discussion and Results</h1>
+        <p>
+          The findings reveal that <strong>perception of crime is not directly proportional to income</strong>. While Petworth has experienced economic growth and gentrification, it continues to be perceived as less safe than Cleveland Park. Why?
+        </p>
+    
+        <h2>Broken Windows Theory</h2>
+        <p>
+          Small signs of disorder (like graffiti or loitering) may increase fear of crime, regardless of actual rates. These cues may be more visible in Petworth, affecting perceptions even if actual victimization rates do not match.
+        </p>
+    
+        <h2>Labeling and Symbolic Narratives</h2>
+        <p>
+          Petworth's identity as a historically Black working-class neighborhood contributes to its enduring reputation. In contrast, Cleveland Park benefits from a long-standing narrative of affluence and safety.
+        </p>
+    
+        <h2>Gentrification Dynamics</h2>
+        <p>
+          New residents in Petworth often bring different expectations of safety. Their discomfort with local conditions, unfamiliarity with cultural norms, or exposure to racial bias can amplify concerns about crime.
+        </p>
+    
+        <h2>Social Disorganization Theory</h2>
+        <p>
+          Differences in community cohesion, trust in law enforcement, and neighborhood networks can affect how safe residents feel. In more established neighborhoods like Cleveland Park, stronger social ties may contribute to lower perceived crime.
+        </p>
+    
+        <blockquote>
+          “Even with similar income levels, neighborhoods like Petworth are seen as less safe due to the lingering effects of racialized spatial inequality and symbolic narratives.”
+        </blockquote>
+      </div>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelectorAll('.nav__link');
+        navToggle.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.body.classList.remove('nav-open');
+            });
+        });
+    </script>
+</body>
+</html>

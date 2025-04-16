@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Gets to Feel Safe: Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html"  class="nav__link">HOME</a></li>
+                <li class="nav__item"><a href="data.html" class="nav__link">DATA & ANALYSIS</a></li>
+                <li class="nav__item"><a href="results.html" class="nav__link">DISCUSSION & RESULTS</a></li>
+                <li class="nav__item"><a href="conclusion.html" class="nav__link">CONCLUSION</a></li>
+                <li class="nav__item"><a href="methods.html" class="nav__link">METHODOLOGY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <body>
+        <div class="container">
+          <h1>Conclusion</h1>
+          <p>
+            This project demonstrates that income alone does not determine perceptions of crime. While both Cleveland Park and Petworth are relatively affluent neighborhoods in Northwest Washington, DC, their reputations differ dramatically. Cleveland Park benefits from both material wealth and symbolic safety, while Petworth continues to be perceived as unsafe despite rising incomes and revitalization.
+          </p>
+          <p>
+            These findings highlight that <strong>crime perception is a social construct</strong>, shaped by historical narratives, racial dynamics, urban development, and symbolic cues—not just statistics. Urban safety, therefore, is as much about visibility, identity, and power as it is about actual crime rates.
+          </p>
+          <blockquote>
+            “To build safer and more equitable cities, we must challenge the narratives that stigmatize communities and instead focus on trust, representation, and justice.”
+          </blockquote>
+          <p>
+            Going forward, sociologists, urban planners, and policymakers should consider how social meaning is attached to space. Reimagining safety means reimagining not only policing and infrastructure, but also the stories we tell about each other and the places we live.
+          </p>
+        </div>
+      </body>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelectorAll('.nav__link');
+        navToggle.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.body.classList.remove('nav-open');
+            });
+        });
+    </script>
+</body>
+</html>

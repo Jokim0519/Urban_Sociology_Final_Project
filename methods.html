@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who Gets to Feel Safe: Data</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&family=Raleway:ital,wght@0,100..900;1,100..900&family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <button class="nav-toggle" aria-label="toggle navigation">
+            <span class="hamburger"></span>
+        </button>
+        <nav class="nav">
+            <ul class="nav__list">
+                <li class="nav__item"><a href="index.html"  class="nav__link">HOME</a></li>
+                <li class="nav__item"><a href="data.html" class="nav__link">DATA & ANALYSIS</a></li>
+                <li class="nav__item"><a href="results.html" class="nav__link">DISCUSSION & RESULTS</a></li>
+                <li class="nav__item"><a href="conclusion.html" class="nav__link">CONCLUSION</a></li>
+                <li class="nav__item"><a href="methods.html" class="nav__link">METHODOLOGY</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <h1>Sources and Methods</h1>
+    
+        <h2>Primary Data Sources</h2>
+        <ul>
+          <li>
+            <strong>American Community Survey (ACS), 2023 5-Year Estimates</strong><br>
+            <a href="https://data.census.gov/">https://data.census.gov/</a>
+          </li>
+          <li>
+            <strong>District of Columbia Metropolitan Police Department – Crime Data (2023)</strong><br>
+            <a href="https://crimecards.dc.gov/">https://crimecards.dc.gov/</a>
+          </li>
+        </ul>
+    
+        <h2>Methodology</h2>
+        <p>
+          This project uses a comparative case study approach to analyze the neighborhoods of Cleveland Park and Petworth in Northwest DC. The core variables examined include median household income, reported crime statistics, and perception of safety.
+        </p>
+        <p>
+          Quantitative data was gathered through the American Community Survey and local crime databases. Charts were generated to visualize income differences and crime totals. Perception of crime was analyzed using publicly available city-wide survey data and existing sociological research.
+        </p>
+    
+        <h2>Sociological Theories Applied</h2>
+        <ul>
+          <li><strong>Broken Windows Theory</strong> – Wilson & Kelling (1982)</li>
+          <li><strong>Labeling Theory</strong> – Becker (1963)</li>
+          <li><strong>Gentrification and Urban Change</strong> – Zukin (2010), Freeman (2005)</li>
+          <li><strong>Social Disorganization Theory</strong> – Shaw & McKay (1942), Sampson et al. (1997)</li>
+        </ul>
+      </div>
+    <script>
+        const navToggle = document.querySelector('.nav-toggle');
+        const navLinks = document.querySelectorAll('.nav__link');
+        navToggle.addEventListener('click', () => {
+            document.body.classList.toggle('nav-open');
+        });
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                document.body.classList.remove('nav-open');
+            });
+        });
+    </script>
+</body>
+</html>
